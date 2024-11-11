@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: circuss-app-auth-backend-coll-6c6330b8a4374db8b47999041db0b22b-depl
+  labels:
+    app: circuss-app-auth-backend-coll-6c6330b8a4374db8b47999041db0b22b
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: circuss-app-auth-backend-coll-6c6330b8a4374db8b47999041db0b22b
+  template:
+    metadata:
+      labels:
+        app: circuss-app-auth-backend-coll-6c6330b8a4374db8b47999041db0b22b
+    spec:
+      containers:
+        - name: circuss-app-auth-backend-coll-6c6330b8a4374db8b47999041db0b22b
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:circuss-app-auth-backend-coll-6c6330b8a4374db8b47999041db0b22b
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9028

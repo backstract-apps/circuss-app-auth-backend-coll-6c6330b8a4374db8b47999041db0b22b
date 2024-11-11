@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: circuss-app-auth-backend-coll-6c6330b8a4374db8b47999041db0b22b-srv
+spec:
+  selector:
+    app: circuss-app-auth-backend-coll-6c6330b8a4374db8b47999041db0b22b
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9028
+  type: ClusterIP
